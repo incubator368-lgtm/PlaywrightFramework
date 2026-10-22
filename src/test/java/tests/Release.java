@@ -24,7 +24,7 @@ public class Release extends BaseTest {
 		page.locator("//button[text()='Ok']").click();
 		page.locator("//a[text()='Listing & Contact']").click();
 		page.locator("(//input[@type='text'])[1]").fill("http://192.168.0.5:3002/dashboard");
-		page.locator("(//input[@type='text'])[2]").fill("06/08/2025");
+		page.locator("(//input[@type='text'])[2]").fill("12/08/2025");
 		page.locator("(//input[@type='text'])[5]").fill("S56465");
 		page.locator("//a[contains(text(),'Trustee')]").click();
 		page.locator("(//input[@type='text'])[1]").fill("ALASKA TRUSTEE LLC");
@@ -37,7 +37,7 @@ public class Release extends BaseTest {
 		page.locator("(//select)[1]").selectOption("CON");
 		page.locator("//body").click();
 		page.locator("//a[contains(text(),'RELEASE')]").click();
-		page.locator("(//input[@type='text'])[2]").fill("03/08/2025");
+		page.locator("(//input[@type='text'])[2]").fill("04/08/2026");
 		page.locator("//span[text()='Submit']").click();
 		page.locator("//button[text()='Ok']").click();
 		page.locator("//button[text()='Ok']").click();

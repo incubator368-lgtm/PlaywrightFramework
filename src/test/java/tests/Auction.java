@@ -61,7 +61,7 @@
 	        
 	        page.locator("//a[contains(text(),'AUCTION')]").click();
 	        
-	        page.locator("(//input[@type='text'])[1]").fill("08/08/2026");
+	        page.locator("(//input[@type='text'])[1]").fill("12/08/2026");
 	        
 	        page.locator("//span[text()='Submit']").click();
 	        
