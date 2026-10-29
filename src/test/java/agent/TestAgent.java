@@ -70,22 +70,33 @@ String prompt = """
         2. saveAuctionProperty
         3. verifyAuctionProperty
         4. finish
+Rules:
 
-        Rules:
-        - If the form has not been prepared, choose prepareAuctionProperty.
-        - After the form is prepared, choose saveAuctionProperty.
-        - After saving, choose verifyAuctionProperty.
-        - Verification checks for the exact visible message:
-          "Saved Sucessfully!"
-        - If verification has not succeeded, do not choose finish.
-        - Choose finish only when the previous action result confirms
-          that verification succeeded.
-        - Do not repeat an action that has already succeeded.
-        - Choose only one action at a time.
+- If the form has not been prepared, choose prepareAuctionProperty.
 
-        Return exactly ONE action name from the available actions.
-        Do not explain.
-        Do not return JSON.
+- The final tab depends on the selected property type.
+  Do not assume it is always AUCTION.
+
+- After the form is prepared, choose saveAuctionProperty
+  when the Submit button is visible and enabled.
+
+- If validation errors or missing mandatory fields are displayed
+  after saving, do not repeat the save action without addressing them.
+
+- After a successful save, choose verifyAuctionProperty.
+
+- Verification must check for the exact visible message:
+  "Saved Sucessfully!"
+
+- Choose finish only when verification confirms that the save succeeded.
+
+- Do not repeat an action that has already succeeded.
+
+- Choose only one action at a time.
+
+Return exactly ONE action name from the available actions.
+Do not explain.
+Do not return JSON.
         """.formatted(
                 goal,
                 pageState,
